@@ -2,8 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  experimental: {
-    styledComponents: true,
+  compiler: {
+    styledComponents: true
   },
   webpack: (config) => {
     config.resolve.alias['@'] = __dirname;
