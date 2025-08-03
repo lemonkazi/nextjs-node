@@ -14,8 +14,11 @@ RUN npm install
 # Copy all files
 COPY . .
 
-# Expose port 3001 (common Node.js API port)
-EXPOSE 3001
+# Build the application
+#RUN npm run build
+
+# Expose port 9000 (API port)
+EXPOSE 9000
 
 # Start the application
 CMD ["npm", "start"]

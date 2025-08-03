@@ -235,8 +235,21 @@ routes.forEach((route) => {
             break;
     }
 });
+app.get("/api/hello", (req: Request, res: Response, next: NextFunction) => {
+//app.get("/api/hello", (req, res) => {
+  res.json({ message: "Hello from Express!" });
+});
+
+app.get("/api/goodbye", (req: Request, res: Response, next: NextFunction) => {
+    res.json({ message: "Goodbye from Express!" });
+});
+
+app.get("/api/date", (req: Request, res: Response, next: NextFunction) => {
+    res.json({ message: new Date() });
+});
 
 app.listen(PORT, () => {
+    console.log(`Server started on http://localhost:${PORT}`);
     console.log(`Timezones by location application is running on port ${PORT}.`);
     console.log(`Endpoints: `);
     routes.forEach((route) => console.log(`${route.method} ${route.endpoint}`));
