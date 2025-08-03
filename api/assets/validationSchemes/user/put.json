@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+      "role": {
+          "type": "string"
+      },
+      "username": {
+          "type": "string"
+      },
+      "email": {
+        "type": "string",
+        "minLength": 6,
+        "maxLength": 127,
+        "description": "Email of the user"
+      },
+      "password": {
+        "type": "string"
+      }
+  },
+  "required": [],
+  "additionalProperties": false
+}
