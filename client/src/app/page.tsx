@@ -13,12 +13,12 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={styles.container}>
-      <header className={styles.header}>
-        <img src="./logo.svg" className={styles.logo} alt="logo" />
-        <h1 className={styles.title}>Welcome to Next.js</h1>
+    <div className={styles.App}>
+      <header className={styles['App-header']}>
+        <img src={'./logo.svg'} className={styles['App-logo']} alt="logo" />
+        <h1 className={styles['App-title']}>Welcome to Next.js</h1>
       </header>
-      <p className={styles.description}>{apiResponse}</p>
+      <p className={styles['App-intro']}>{apiResponse}</p>
     </div>
   );
 }
